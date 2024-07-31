@@ -7,8 +7,8 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 
 const Navbar = () => {
-  const [navbar, setNavbar] = useState(true);
-  const menus = ["Dashboard", "LogOut", "setting"];
+  const [navbar, setNavbar] = useState(false);
+
 
   const menuRef = useRef();
   const imgRef = useRef();
@@ -63,11 +63,22 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 lg:hidden md:block md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
-                    Dashboard
+                    Dahsboard
                   </Link>
                 </li>
+                <li className="pb-6 text-xl text-white py-2 lg:hidden md:block md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                    Sign Out
+                  </Link>
+                </li>
+                <li className="pb-6 text-xl text-white py-2 md:px-6 lg:hidden md:block text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                    Setting
+                  </Link>
+                </li>
+                
               </ul>
             </div>
           </div>
@@ -85,9 +96,14 @@ const Navbar = () => {
                   className="absolute bg-white p-4 w-32 shadow-lg -left-12 top-8 rounded-lg"
                 >
                   <ul>
-                    <li className="text-xl border-b-2 text-start md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                    <li className="text-xl border-b-2 pb-2 text-start md:border-b-0 hover:bg-purple-900 md:hover:text-green-600 md:hover:bg-transparent">
                       <Link href="#about" onClick={() => setNavbar(!navbar)}>
                         Dashboard
+                      </Link>
+                    </li>
+                    <li className="text-xl border-b-2 text-start md:border-b-0 hover:text-green-300 md:hover:text-green-600 md:hover:bg-transparent">
+                      <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                        Sign Up
                       </Link>
                     </li>
                   </ul>
