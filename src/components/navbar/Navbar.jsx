@@ -4,10 +4,19 @@ import Image from "next/image";
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(true);
+  const menus = ["Dashboard", "LogOut", "setting"];
+
+  const menuRef = useRef();
+  const imgRef = useRef();
+  window.addEventListener("click", (e) => {
+    if (e.target === menuRef.current && e.target === imgRef.current) {
+      setNavbar(false);
+    }
+  });
   return (
     <div>
       <nav className="w-full bg-slate-400 fixed top-0 left-0 right-0 z-10">
@@ -24,9 +33,9 @@ const Navbar = () => {
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <FaRegUserCircle className="text-3xl text-white"/>
+                    <FaRegUserCircle className="text-3xl text-white" />
                   ) : (
-                    <FaRegUserCircle className="text-3xl text-white"/>
+                    <FaRegUserCircle className="text-3xl text-white" />
                   )}
                 </button>
               </div>
@@ -54,12 +63,37 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </li>
+                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                    Dashboard
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
-          <div ></div>
-          <div className="md:block hidden cursor-pointer">
-          <FaRegUserCircle className="text-3xl text-white"/>
+          <div>
+            <div className="md:block hidden cursor-pointer relative">
+              <FaRegUserCircle
+                ref={imgRef}
+                onClick={() => setNavbar(!navbar)}
+                className="text-3xl text-white"
+              />
+              {navbar && (
+                <div
+                  ref={menuRef}
+                  onClick={() => setNavbar(!navbar)}
+                  className="absolute bg-white p-4 w-32 shadow-lg -left-12 top-8 rounded-lg"
+                >
+                  <ul>
+                    <li className="text-xl border-b-2 text-start md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                      <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                        Dashboard
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </nav>
