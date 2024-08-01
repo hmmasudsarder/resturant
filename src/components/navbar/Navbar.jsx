@@ -63,17 +63,17 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 lg:hidden md:block md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="md:hidden block pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     Dahsboard
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 lg:hidden md:block md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 md:hidden block md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     Sign Out
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 lg:hidden md:block text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 md:hidden block text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     Setting
                   </Link>
