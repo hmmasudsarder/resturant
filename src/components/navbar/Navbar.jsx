@@ -93,7 +93,7 @@ const Navbar = () => {
                 <div
                   ref={menuRef}
                   onClick={() => setNavbar(!navbar)}
-                  className="absolute bg-white p-4 w-32 shadow-lg -left-12 top-8 rounded-lg"
+                  className="absolute md:-ml-6 bg-white p-4 w-32 shadow-lg -left-12 top-8 rounded-lg"
                 >
                   <ul>
                     <li className="text-xl border-b-2 pb-2 text-start md:border-b-0 hover:bg-purple-900 md:hover:text-green-600 md:hover:bg-transparent">
