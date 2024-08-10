@@ -4,19 +4,32 @@ import Image from "next/image";
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
 
-
   const menuRef = useRef();
   const imgRef = useRef();
-  window.addEventListener("click", (e) => {
-    if (e.target === menuRef.current && e.target === imgRef.current) {
-      setNavbar(false);
-    }
-  });
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        imgRef.current &&
+        !imgRef.current.contains(e.target)
+      ) {
+        setNavbar(false);
+      }
+    };
+
+    window.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
   return (
     <div>
       <nav className="w-full bg-slate-400 fixed top-0 left-0 right-0 z-10">
@@ -78,20 +91,19 @@ const Navbar = () => {
                     Setting
                   </Link>
                 </li>
-                
               </ul>
             </div>
           </div>
           <div>
             <div className="md:block hidden cursor-pointer relative">
               <FaRegUserCircle
-                ref={imgRef}
+                ref={menuRef}
                 onClick={() => setNavbar(!navbar)}
                 className="text-3xl text-white"
               />
               {navbar && (
                 <div
-                  ref={menuRef}
+                  ref={imgRef}
                   onClick={() => setNavbar(!navbar)}
                   className="absolute md:-ml-6 bg-white p-4 w-32 shadow-lg -left-12 top-8 rounded-lg"
                 >
