@@ -97,13 +97,13 @@ const Navbar = () => {
           <div>
             <div className="md:block hidden cursor-pointer relative">
               <FaRegUserCircle
-                ref={menuRef}
+                ref={imgRef}
                 onClick={() => setNavbar(!navbar)}
                 className="text-3xl text-white"
               />
               {navbar && (
                 <div
-                  ref={imgRef}
+                  ref={menuRef}
                   onClick={() => setNavbar(!navbar)}
                   className="absolute md:-ml-6 bg-white p-4 w-32 shadow-lg -left-12 top-8 rounded-lg"
                 >
