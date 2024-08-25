@@ -12,9 +12,17 @@ const Navbar = () => {
 
   const menuRef = useRef();
 
+  const handleOnclickOutSide = (e) => {
+    setOpen(false);
+  };
 
   useEffect(() => {
+    document.addEventListener("mousedown", handleOnclickOutSide);
+    return () => {
+      document.removeEventListener("mousedown", handleOnclickOutSide);
+    };
   }, []);
+
   return (
     <div>
       <nav className="w-full bg-slate-400 fixed top-0 left-0 right-0 z-10">
@@ -80,14 +88,16 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            <div className="md:block hidden cursor-pointer relative">
+            <div
+              className="md:block hidden cursor-pointer relative"
+              ref={menuRef}
+            >
               <FaRegUserCircle
                 onClick={() => setOpen(!open)}
                 className="text-3xl text-white"
               />
               {open && (
                 <div
-                  ref={menuRef}
                   onClick={() => setOpen(!open)}
                   className="absolute md:-ml-6 bg-white p-4 w-32 shadow-lg -left-12 top-8 rounded-lg"
                 >
