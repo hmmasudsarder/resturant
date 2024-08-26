@@ -25,8 +25,9 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="w-full bg-slate-400 fixed top-0 left-0 right-0 z-10">
+      <nav className="w-full lg:bg-light md:bg-slate-400 fixed shadow-lg top-0 left-0 right-0 z-10">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+          
           <div className="">
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               {/* {LOGO} */}
@@ -39,47 +40,48 @@ const Navbar = () => {
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <FaRegUserCircle className="text-3xl text-white" />
+                    <FaRegUserCircle className="text-3xl md:text-white" />
                   ) : (
-                    <FaRegUserCircle className="text-3xl text-white" />
+                    <FaRegUserCircle className="text-3xl md:text-white" />
                   )}
                 </button>
               </div>
             </div>
           </div>
           <div>
+            {/* nav items section  */}
             <div
               className={`flex-1 items-center justify-self-start pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
                 navbar ? "p-12 md:p-0 block" : "hidden"
               }`}
             >
               <ul className="h-screen md:h-auto mt-3 items-center justify-center md:flex">
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl lg:text-black md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     About
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl lg:text-black md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     Blogs
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl lg:text-black md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     Contact
                   </Link>
                 </li>
-                <li className="md:hidden block pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600">
+                <li className="md:hidden block pb-6 text-xl md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     Dahsboard
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:hidden block md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl md:text-white py-2 md:hidden block md:px-6 text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     Sign Out
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 md:hidden block text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl md:text-white py-2 md:px-6 md:hidden block text-center border-b-2 md:border-b-0 hover:bg-purple-900 md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     Setting
                   </Link>
@@ -87,6 +89,8 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
+
+          {/* droup down section lg screen  */}
           <div>
             <div
               className="md:block hidden cursor-pointer relative"
@@ -94,7 +98,7 @@ const Navbar = () => {
             >
               <FaRegUserCircle
                 onClick={() => setOpen(!open)}
-                className="text-3xl text-white"
+                className="text-3xl lg:text-slate-400 md:text-white"
               />
               {open && (
                 <div
