@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="py-28 bg-[#f7f7ff]">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-28 md:gap-4">
           {/* Firse Section  */}
           <div className="space-y-4 max-w-[300px]">
             <h2 className="text-2xl font-bold">The Coding Journey</h2>
@@ -17,7 +17,7 @@ const Footer = () => {
             </p>
           </div>
           {/* Secoud Section  */}
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid grid-cols-2 gap-16">
             <div className="space-y-4">
               <h2 className="text-2xl font-bold">Courses</h2>
               <div className="text-dark2">
@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
           </div>
           {/* third section  */}
-          <div className="space-y-4 max-w-[300px]">
+          <div className="space-y-4 max-w-[600px]">
             <h3 className="text-2xl font-bold">Get In Touch</h3>
             <div className="flex items-center">
                 <input type="text" placeholder="Enter You Email" className="p-3 rounded-s-xl bg-white w-full py-4 focus:ring-0 focus:outline-none placeholder:text-dark2" />

@@ -1,20 +1,13 @@
 import { FaBell } from "react-icons/fa";
 import BgImage from "../../assets/Images/bg.png";
+import Image from "next/image";
 
-const bgStyle = {
-  backgroundImage: `url(${BgImage})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  width: "100%",
-  height: "100%",
-};
-console.log(BgImage);
 const Subscribe = () => {
   return (
-    <section className="bg-[#f7f7f7]">
-      <div style={ bgStyle } className="container py-24 md:py-48">
-        <div className="flex flex-col justify-center">
+    <section className="bg-[#f7f7f7] pb-28">
+      <div className="container py-24 md:py-48">
+        <Image src={BgImage} alt="backgound image" className="w-11/12 -pb-80" width={10000} height={100}/>
+        <div className="flex flex-col justify-center -mt-96">
           <div className="text-center space-y-4 lg:max-w-[430px] mx-auto">
             <h2 className="text-4xl font-bold !leading-snug">
               450+ Students are learning from us

@@ -22,7 +22,6 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleOnclickOutSide);
     };
   }, []);
-
   return (
     <div>
       <nav className="w-full lg:bg-light md:bg-slate-400 fixed shadow-lg top-0 left-0 right-0 z-50">
