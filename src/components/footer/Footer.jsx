@@ -17,7 +17,7 @@ const Footer = () => {
             </p>
           </div>
           {/* Secoud Section  */}
-          <div className="grid grid-cols-2 gap-16">
+          <div className="grid grid-cols-2 gap-14">
             <div className="space-y-4">
               <h2 className="text-2xl font-bold">Courses</h2>
               <div className="text-dark2">
