@@ -18,7 +18,7 @@ const Subscribe = () => {
             </p>
             <a
               href=""
-              className="primary-btn !mt-8 inline-flex items-center justify-center gap-4 group"
+              className="bg-primary p-3 rounded-xl !mt-8 inline-flex items-center justify-center gap-4 group"
             >
               Subscribe Now{" "}
               <FaBell className="group-hover:animate-bounce group-hover:text-lg duration-200" />{" "}

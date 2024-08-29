@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
   return (
     <div>
-      <nav className="w-full lg:bg-light md:bg-slate-400 fixed shadow-lg top-0 left-0 right-0 z-50">
+      <nav className="w-full lg:bg-light fixed shadow-lg top-0 left-0 right-0 z-50">
         <div className="justify-between px-4 mx-12 lg:max-w-7xl md:items-center md:flex md:px-8">
           
           <div className="">
@@ -102,15 +102,15 @@ const Navbar = () => {
               {open && (
                 <div
                   onClick={() => setOpen(!open)}
-                  className="absolute md:-ml-6 bg-white p-4 w-32 shadow-lg -left-12 top-8 rounded-lg"
+                  className="absolute md:-ml-6 bg-white p-4 lg:w-36 shadow-lg -left-12 top-8 rounded-lg"
                 >
                   <ul>
-                    <li className="text-xl border-b-2 pb-2 text-start md:border-b-0 hover:bg-purple-900 md:hover:text-green-600 md:hover:bg-transparent">
+                    <li className="text-xl border-b-2 pb-2 text-start md:border-b-0 hover:bg-purple-900 md:hover:text-secondary md:hover:bg-transparent">
                       <Link href="#about" onClick={() => setNavbar(!navbar)}>
                         Dashboard
                       </Link>
                     </li>
-                    <li className="text-xl border-b-2 text-start md:border-b-0 hover:text-green-300 md:hover:text-green-600 md:hover:bg-transparent">
+                    <li className="text-xl border-b-2 text-start md:border-b-0 hover:text-green-300 md:hover:text-secondary md:hover:bg-transparent">
                       <Link href="#about" onClick={() => setNavbar(!navbar)}>
                         Sign Up
                       </Link>
