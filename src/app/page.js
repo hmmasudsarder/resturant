@@ -3,6 +3,7 @@ import Banner2 from "@/components/banner/Banner2";
 import HeroSection from "@/components/heroSection/HeroSection";
 import Compaines from "@/components/compaines/Compaines";
 import Subscribe from "@/components/subscribe/Subscribe";
+import Card from "@/components/card/Card";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <div className="">
         <HeroSection/>
         <Compaines/>
+        <Card/>
         <Banner/>
         <Subscribe/>
         <Banner2/>
