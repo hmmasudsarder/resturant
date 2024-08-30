@@ -18,7 +18,7 @@ const Banner2 = () => {
               aperiam, commodi dolorum nostrum unde facilis repudiandae sed
               molestias magnam vitae.
             </p>
-            <button className="mt-8 primary-btn"><Link href="" className="primary-btn mt-8">
+            <button className="mt-8 p-3 rounded-lg px-4 bg-primary"><Link href="" className="primary-btn mt-8">
               Join Now
             </Link></button>
           </div>
