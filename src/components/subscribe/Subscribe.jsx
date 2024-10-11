@@ -10,7 +10,7 @@ const Subscribe = () => {
         <div className="flex flex-col justify-center -mt-96">
           <div className="text-center space-y-4 lg:max-w-[430px] mx-auto">
             <h2 className="text-4xl font-bold !leading-snug">
-              450+ Students are learning from us
+              400+ Students are learning from us
             </h2>
             <p className="">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
